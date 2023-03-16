@@ -10,9 +10,12 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class PhotoAdapter extends BaseAdapter {
+
     private ArrayList<Photo> photo_list;
     private Context context;
 

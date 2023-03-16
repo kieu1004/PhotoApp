@@ -1,13 +1,14 @@
 package com.example.photoapp;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class ViewPhotoActivity extends AppCompatActivity {
 
@@ -35,8 +36,8 @@ public class ViewPhotoActivity extends AppCompatActivity {
 
 
 //        //new DownloadImage(iv_detail).execute((getPhotoFromId(id, generatePhotoData()).getSource_photo()));
-        Picasso.get().load(photo.getSource_photo()).resize(400, 500).centerCrop().into(iv_detail);
-        tv_detail_title.setText(photo.getTitle_photo());
-        tv_detail_description.setText(photo.getDescription_photo());
+          Picasso.get().load(photo.getSource_photo()).resize(400, 500).centerCrop().into(iv_detail);
+          tv_detail_title.setText(photo.getTitle_photo());
+          tv_detail_description.setText(photo.getDescription_photo());
     }
 }

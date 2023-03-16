@@ -1,25 +1,25 @@
 package com.example.photoapp;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+import static android.support.constraint.Constraints.TAG;
 
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-
     GridView gridview;
     private AdapterView.OnItemClickListener onitemclick = new AdapterView.OnItemClickListener() {
         @Override
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         //getSupportActionBar().hide();
         ApiService.apiService.groupList().enqueue(new Callback<ArrayList<Photo>>() {
+
 
             @Override
             public void onResponse(Call<ArrayList<Photo>> call, Response<ArrayList<Photo>> response) {
@@ -85,4 +86,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }
